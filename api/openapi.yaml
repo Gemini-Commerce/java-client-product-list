@@ -3,7 +3,6 @@ info:
   contact:
     email: info@gemini-commerce.com
     name: Gemini Team
-  description: API for managing collection
   license:
     name: Gemini fair use license
     url: https://gemini-commerce.com/api/fair-use-license
@@ -11,6 +10,8 @@ info:
   version: v1
 servers:
 - url: https://product-list.api.gogemini.io/
+security:
+- Authorization: []
 tags:
 - description: Collection Description
   externalDocs:
@@ -19,9 +20,7 @@ tags:
 paths:
   /productlist.ProductList/BulkUpdateProductListAssociations:
     post:
-      description: The BulkUpdateProductListAssociations endpoint updates the positions
-        of specified associations.
-      operationId: BulkUpdateProductListAssociations
+      operationId: ProductList_BulkUpdateProductListAssociations
       requestBody:
         content:
           application/json:
@@ -33,30 +32,14 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/rpcStatus'
-          description: OK
-        "401":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/rpcStatus'
-          description: Unauthorized
-        "500":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/rpcStatus'
-          description: An internal error occurred is thrown when an incompatible payload
-            is sent
+                $ref: '#/components/schemas/productlistBulkUpdateProductListAssociationsResponse'
+          description: A successful response.
         default:
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
-      summary: Bulk update collection associations position
       tags:
       - ProductList
       x-codegen-request-body-name: body
@@ -100,8 +83,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Create Collection
       tags:
       - ProductList
@@ -145,8 +126,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Create Collection/Product Association
       tags:
       - ProductList
@@ -190,8 +169,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Delete Collection
       tags:
       - ProductList
@@ -235,8 +212,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Delete Collection/Product Association
       tags:
       - ProductList
@@ -281,8 +256,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Get Collection/Product Associations by Product GRN
       tags:
       - ProductList
@@ -326,8 +299,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Get Collection by Code
       tags:
       - ProductList
@@ -371,8 +342,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Get Collection by Id
       tags:
       - ProductList
@@ -416,8 +385,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Get Collection by Url Key
       tags:
       - ProductList
@@ -461,8 +428,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Get Collection Product Count
       tags:
       - ProductList
@@ -506,8 +471,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: List Collection/Product Associations
       tags:
       - ProductList
@@ -551,8 +514,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: List Collections
       tags:
       - ProductList
@@ -596,8 +557,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Search Collections
       tags:
       - ProductList
@@ -641,9 +600,50 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Search Collections by Ids
+      tags:
+      - ProductList
+      x-codegen-request-body-name: body
+      x-content-type: application/json
+      x-accepts: application/json
+  /productlist.ProductList/SetProductListAssociations:
+    post:
+      description: The SetProductListAssociations endpoint is used to set the associations
+        between a collection and a list of products.
+      operationId: SetProductListAssociations
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/productlistSetProductListAssociationsRequest'
+        required: true
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/productlistSetProductListAssociationsResponse'
+          description: OK
+        "401":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: Unauthorized
+        "500":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An internal error occurred is thrown when an incompatible payload
+            is sent
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/rpcStatus'
+          description: An unexpected error response.
+      summary: Set Collection/Product Associations
       tags:
       - ProductList
       x-codegen-request-body-name: body
@@ -686,8 +686,6 @@ paths:
               schema:
                 $ref: '#/components/schemas/rpcStatus'
           description: An unexpected error response.
-      security:
-      - standardAuthorization: []
       summary: Update Collection
       tags:
       - ProductList
@@ -710,6 +708,16 @@ components:
             type: string
           type: array
         value:
+          type: string
+      type: object
+    SetProductListAssociationsRequestAssociation:
+      properties:
+        listId:
+          type: string
+        position:
+          format: int32
+          type: integer
+        productGrn:
           type: string
       type: object
     productlistBulkUpdateProductListAssociationsRequest:
@@ -1274,6 +1282,45 @@ components:
           format: int64
           type: integer
       type: object
+    productlistSetProductListAssociationsRequest:
+      properties:
+        tenantId:
+          type: string
+        listId:
+          type: string
+        productGrn:
+          type: string
+        associations:
+          items:
+            $ref: '#/components/schemas/SetProductListAssociationsRequestAssociation'
+          type: array
+      type: object
+    productlistSetProductListAssociationsResponse:
+      example:
+        associations:
+        - listId: listId
+          productGrn: productGrn
+          id: id
+          position: 0
+        - listId: listId
+          productGrn: productGrn
+          id: id
+          position: 0
+        errors:
+        - code: code
+          message: message
+        - code: code
+          message: message
+      properties:
+        associations:
+          items:
+            $ref: '#/components/schemas/productlistProductListAssociation'
+          type: array
+        errors:
+          items:
+            $ref: '#/components/schemas/productlistProductListAssociationError'
+          type: array
+      type: object
     productlistUpdateProductListRequest:
       properties:
         tenantId:
@@ -1439,12 +1486,6 @@ components:
           type: string
       type: object
     rpcStatus:
-      example:
-        code: 0
-        details:
-        - '@type': '@type'
-        - '@type': '@type'
-        message: message
       properties:
         code:
           format: int32
@@ -1457,6 +1498,10 @@ components:
           type: array
       type: object
   securitySchemes:
+    Authorization:
+      in: header
+      name: Authorization
+      type: apiKey
     standardAuthorization:
       flows:
         implicit:

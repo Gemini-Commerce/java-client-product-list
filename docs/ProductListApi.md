@@ -4,7 +4,6 @@ All URIs are relative to *https://product-list.api.gogemini.io*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
-| [**bulkUpdateProductListAssociations**](ProductListApi.md#bulkUpdateProductListAssociations) | **POST** /productlist.ProductList/BulkUpdateProductListAssociations | Bulk update collection associations position |
 | [**createProductList**](ProductListApi.md#createProductList) | **POST** /productlist.ProductList/CreateProductList | Create Collection |
 | [**createProductListAssociation**](ProductListApi.md#createProductListAssociation) | **POST** /productlist.ProductList/CreateProductListAssociation | Create Collection/Product Association |
 | [**deleteProductList**](ProductListApi.md#deleteProductList) | **POST** /productlist.ProductList/DeleteProductList | Delete Collection |
@@ -16,80 +15,12 @@ All URIs are relative to *https://product-list.api.gogemini.io*
 | [**getProductListsCount**](ProductListApi.md#getProductListsCount) | **POST** /productlist.ProductList/GetProductListsCount | Get Collection Product Count |
 | [**listProductListAssociations**](ProductListApi.md#listProductListAssociations) | **POST** /productlist.ProductList/ListProductListAssociations | List Collection/Product Associations |
 | [**listProductLists**](ProductListApi.md#listProductLists) | **POST** /productlist.ProductList/ListProductLists | List Collections |
+| [**productListBulkUpdateProductListAssociations**](ProductListApi.md#productListBulkUpdateProductListAssociations) | **POST** /productlist.ProductList/BulkUpdateProductListAssociations |  |
 | [**searchProductLists**](ProductListApi.md#searchProductLists) | **POST** /productlist.ProductList/SearchProductLists | Search Collections |
 | [**searchProductListsByIds**](ProductListApi.md#searchProductListsByIds) | **POST** /productlist.ProductList/SearchProductListsByIds | Search Collections by Ids |
+| [**setProductListAssociations**](ProductListApi.md#setProductListAssociations) | **POST** /productlist.ProductList/SetProductListAssociations | Set Collection/Product Associations |
 | [**updateProductList**](ProductListApi.md#updateProductList) | **POST** /productlist.ProductList/UpdateProductList | Update Collection |
 
-
-<a id="bulkUpdateProductListAssociations"></a>
-# **bulkUpdateProductListAssociations**
-> RpcStatus bulkUpdateProductListAssociations(body)
-
-Bulk update collection associations position
-
-The BulkUpdateProductListAssociations endpoint updates the positions of specified associations.
-
-### Example
-```java
-// Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
-import org.openapitools.client.api.ProductListApi;
-
-public class Example {
-  public static void main(String[] args) {
-    ApiClient defaultClient = Configuration.getDefaultApiClient();
-    defaultClient.setBasePath("https://product-list.api.gogemini.io");
-    
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
-
-    ProductListApi apiInstance = new ProductListApi(defaultClient);
-    ProductlistBulkUpdateProductListAssociationsRequest body = new ProductlistBulkUpdateProductListAssociationsRequest(); // ProductlistBulkUpdateProductListAssociationsRequest | 
-    try {
-      RpcStatus result = apiInstance.bulkUpdateProductListAssociations(body);
-      System.out.println(result);
-    } catch (ApiException e) {
-      System.err.println("Exception when calling ProductListApi#bulkUpdateProductListAssociations");
-      System.err.println("Status code: " + e.getCode());
-      System.err.println("Reason: " + e.getResponseBody());
-      System.err.println("Response headers: " + e.getResponseHeaders());
-      e.printStackTrace();
-    }
-  }
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**ProductlistBulkUpdateProductListAssociationsRequest**](ProductlistBulkUpdateProductListAssociationsRequest.md)|  | |
-
-### Return type
-
-[**RpcStatus**](RpcStatus.md)
-
-### Authorization
-
-[standardAuthorization](../README.md#standardAuthorization)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-| **200** | OK |  -  |
-| **401** | Unauthorized |  -  |
-| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
-| **0** | An unexpected error response. |  -  |
 
 <a id="createProductList"></a>
 # **createProductList**
@@ -114,9 +45,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistCreateProductListRequest body = new ProductlistCreateProductListRequest(); // ProductlistCreateProductListRequest | 
@@ -146,7 +79,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -184,9 +117,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistCreateProductListAssociationRequest body = new ProductlistCreateProductListAssociationRequest(); // ProductlistCreateProductListAssociationRequest | 
@@ -216,7 +151,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -254,9 +189,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistDeleteProductListRequest body = new ProductlistDeleteProductListRequest(); // ProductlistDeleteProductListRequest | 
@@ -286,7 +223,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -324,9 +261,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistDeleteProductListAssociationRequest body = new ProductlistDeleteProductListAssociationRequest(); // ProductlistDeleteProductListAssociationRequest | 
@@ -356,7 +295,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -394,9 +333,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistGetProductListAssociationsByProductGrnRequest body = new ProductlistGetProductListAssociationsByProductGrnRequest(); // ProductlistGetProductListAssociationsByProductGrnRequest | 
@@ -426,7 +367,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -464,9 +405,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistGetProductListByCodeRequest body = new ProductlistGetProductListByCodeRequest(); // ProductlistGetProductListByCodeRequest | 
@@ -496,7 +439,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -534,9 +477,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistGetProductListByIdRequest body = new ProductlistGetProductListByIdRequest(); // ProductlistGetProductListByIdRequest | 
@@ -566,7 +511,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -604,9 +549,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistGetProductListByUrlKeyRequest body = new ProductlistGetProductListByUrlKeyRequest(); // ProductlistGetProductListByUrlKeyRequest | 
@@ -636,7 +583,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -674,9 +621,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistGetProductListsCountRequest body = new ProductlistGetProductListsCountRequest(); // ProductlistGetProductListsCountRequest | 
@@ -706,7 +655,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -744,9 +693,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistListProductListAssociationsRequest body = new ProductlistListProductListAssociationsRequest(); // ProductlistListProductListAssociationsRequest | 
@@ -776,7 +727,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -814,9 +765,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistListProductListsRequest body = new ProductlistListProductListsRequest(); // ProductlistListProductListsRequest | 
@@ -846,7 +799,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -859,6 +812,74 @@ public class Example {
 | **200** | OK |  -  |
 | **401** | Unauthorized |  -  |
 | **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="productListBulkUpdateProductListAssociations"></a>
+# **productListBulkUpdateProductListAssociations**
+> Object productListBulkUpdateProductListAssociations(body)
+
+
+
+### Example
+```java
+// Import classes:
+import GeminiCommerce_ProductList.ApiClient;
+import GeminiCommerce_ProductList.ApiException;
+import GeminiCommerce_ProductList.Configuration;
+import GeminiCommerce_ProductList.auth.*;
+import GeminiCommerce_ProductList.models.*;
+import org.openapitools.client.api.ProductListApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://product-list.api.gogemini.io");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ProductListApi apiInstance = new ProductListApi(defaultClient);
+    ProductlistBulkUpdateProductListAssociationsRequest body = new ProductlistBulkUpdateProductListAssociationsRequest(); // ProductlistBulkUpdateProductListAssociationsRequest | 
+    try {
+      Object result = apiInstance.productListBulkUpdateProductListAssociations(body);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ProductListApi#productListBulkUpdateProductListAssociations");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ProductlistBulkUpdateProductListAssociationsRequest**](ProductlistBulkUpdateProductListAssociationsRequest.md)|  | |
+
+### Return type
+
+**Object**
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | A successful response. |  -  |
 | **0** | An unexpected error response. |  -  |
 
 <a id="searchProductLists"></a>
@@ -884,9 +905,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistSearchProductListsRequest body = new ProductlistSearchProductListsRequest(); // ProductlistSearchProductListsRequest | 
@@ -916,7 +939,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -954,9 +977,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistSearchProductListsByIdsRequest body = new ProductlistSearchProductListsByIdsRequest(); // ProductlistSearchProductListsByIdsRequest | 
@@ -986,7 +1011,79 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+| **401** | Unauthorized |  -  |
+| **500** | An internal error occurred is thrown when an incompatible payload is sent |  -  |
+| **0** | An unexpected error response. |  -  |
+
+<a id="setProductListAssociations"></a>
+# **setProductListAssociations**
+> ProductlistSetProductListAssociationsResponse setProductListAssociations(body)
+
+Set Collection/Product Associations
+
+The SetProductListAssociations endpoint is used to set the associations between a collection and a list of products.
+
+### Example
+```java
+// Import classes:
+import GeminiCommerce_ProductList.ApiClient;
+import GeminiCommerce_ProductList.ApiException;
+import GeminiCommerce_ProductList.Configuration;
+import GeminiCommerce_ProductList.auth.*;
+import GeminiCommerce_ProductList.models.*;
+import org.openapitools.client.api.ProductListApi;
+
+public class Example {
+  public static void main(String[] args) {
+    ApiClient defaultClient = Configuration.getDefaultApiClient();
+    defaultClient.setBasePath("https://product-list.api.gogemini.io");
+    
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
+
+    ProductListApi apiInstance = new ProductListApi(defaultClient);
+    ProductlistSetProductListAssociationsRequest body = new ProductlistSetProductListAssociationsRequest(); // ProductlistSetProductListAssociationsRequest | 
+    try {
+      ProductlistSetProductListAssociationsResponse result = apiInstance.setProductListAssociations(body);
+      System.out.println(result);
+    } catch (ApiException e) {
+      System.err.println("Exception when calling ProductListApi#setProductListAssociations");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
+    }
+  }
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ProductlistSetProductListAssociationsRequest**](ProductlistSetProductListAssociationsRequest.md)|  | |
+
+### Return type
+
+[**ProductlistSetProductListAssociationsResponse**](ProductlistSetProductListAssociationsResponse.md)
+
+### Authorization
+
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 
@@ -1024,9 +1121,11 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://product-list.api.gogemini.io");
     
-    // Configure OAuth2 access token for authorization: standardAuthorization
-    OAuth standardAuthorization = (OAuth) defaultClient.getAuthentication("standardAuthorization");
-    standardAuthorization.setAccessToken("YOUR ACCESS TOKEN");
+    // Configure API key authorization: Authorization
+    ApiKeyAuth Authorization = (ApiKeyAuth) defaultClient.getAuthentication("Authorization");
+    Authorization.setApiKey("YOUR API KEY");
+    // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+    //Authorization.setApiKeyPrefix("Token");
 
     ProductListApi apiInstance = new ProductListApi(defaultClient);
     ProductlistUpdateProductListRequest body = new ProductlistUpdateProductListRequest(); // ProductlistUpdateProductListRequest | 
@@ -1056,7 +1155,7 @@ public class Example {
 
 ### Authorization
 
-[standardAuthorization](../README.md#standardAuthorization)
+[Authorization](../README.md#Authorization)
 
 ### HTTP request headers
 

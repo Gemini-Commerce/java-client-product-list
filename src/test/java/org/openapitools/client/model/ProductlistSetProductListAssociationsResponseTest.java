@@ -19,39 +19,42 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import org.openapitools.client.model.OrderByDirection;
+import java.util.List;
+import org.openapitools.client.model.ProductlistProductListAssociation;
+import org.openapitools.client.model.ProductlistProductListAssociationError;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ProductlistOrderBy
+ * Model tests for ProductlistSetProductListAssociationsResponse
  */
-public class ProductlistOrderByTest {
-    private final ProductlistOrderBy model = new ProductlistOrderBy();
+public class ProductlistSetProductListAssociationsResponseTest {
+    private final ProductlistSetProductListAssociationsResponse model = new ProductlistSetProductListAssociationsResponse();
 
     /**
-     * Model tests for ProductlistOrderBy
+     * Model tests for ProductlistSetProductListAssociationsResponse
      */
     @Test
-    public void testProductlistOrderBy() {
-        // TODO: test ProductlistOrderBy
+    public void testProductlistSetProductListAssociationsResponse() {
+        // TODO: test ProductlistSetProductListAssociationsResponse
     }
 
     /**
-     * Test the property 'field'
+     * Test the property 'associations'
      */
     @Test
-    public void fieldTest() {
-        // TODO: test field
+    public void associationsTest() {
+        // TODO: test associations
     }
 
     /**
-     * Test the property 'direction'
+     * Test the property 'errors'
      */
     @Test
-    public void directionTest() {
-        // TODO: test direction
+    public void errorsTest() {
+        // TODO: test errors
     }
 
 }

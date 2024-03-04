@@ -24,6 +24,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import org.openapitools.client.model.ProductlistProductListAssociation;
+import org.openapitools.client.model.ProductlistProductListAssociationError;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,23 +51,27 @@ import java.util.Set;
 import GeminiCommerce_ProductList.JSON;
 
 /**
- * ProductlistGetProductListAssociationsByProductGrnResponse
+ * ProductlistSetProductListAssociationsResponse
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-04T10:06:39.440684146Z[Etc/UTC]")
-public class ProductlistGetProductListAssociationsByProductGrnResponse {
+public class ProductlistSetProductListAssociationsResponse {
   public static final String SERIALIZED_NAME_ASSOCIATIONS = "associations";
   @SerializedName(SERIALIZED_NAME_ASSOCIATIONS)
   private List<ProductlistProductListAssociation> associations;
 
-  public ProductlistGetProductListAssociationsByProductGrnResponse() {
+  public static final String SERIALIZED_NAME_ERRORS = "errors";
+  @SerializedName(SERIALIZED_NAME_ERRORS)
+  private List<ProductlistProductListAssociationError> errors;
+
+  public ProductlistSetProductListAssociationsResponse() {
   }
 
-  public ProductlistGetProductListAssociationsByProductGrnResponse associations(List<ProductlistProductListAssociation> associations) {
+  public ProductlistSetProductListAssociationsResponse associations(List<ProductlistProductListAssociation> associations) {
     this.associations = associations;
     return this;
   }
 
-  public ProductlistGetProductListAssociationsByProductGrnResponse addAssociationsItem(ProductlistProductListAssociation associationsItem) {
+  public ProductlistSetProductListAssociationsResponse addAssociationsItem(ProductlistProductListAssociation associationsItem) {
     if (this.associations == null) {
       this.associations = new ArrayList<>();
     }
@@ -88,6 +93,33 @@ public class ProductlistGetProductListAssociationsByProductGrnResponse {
   }
 
 
+  public ProductlistSetProductListAssociationsResponse errors(List<ProductlistProductListAssociationError> errors) {
+    this.errors = errors;
+    return this;
+  }
+
+  public ProductlistSetProductListAssociationsResponse addErrorsItem(ProductlistProductListAssociationError errorsItem) {
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
+    }
+    this.errors.add(errorsItem);
+    return this;
+  }
+
+   /**
+   * Get errors
+   * @return errors
+  **/
+  @javax.annotation.Nullable
+  public List<ProductlistProductListAssociationError> getErrors() {
+    return errors;
+  }
+
+  public void setErrors(List<ProductlistProductListAssociationError> errors) {
+    this.errors = errors;
+  }
+
+
 
   @Override
   public boolean equals(Object o) {
@@ -97,20 +129,22 @@ public class ProductlistGetProductListAssociationsByProductGrnResponse {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProductlistGetProductListAssociationsByProductGrnResponse productlistGetProductListAssociationsByProductGrnResponse = (ProductlistGetProductListAssociationsByProductGrnResponse) o;
-    return Objects.equals(this.associations, productlistGetProductListAssociationsByProductGrnResponse.associations);
+    ProductlistSetProductListAssociationsResponse productlistSetProductListAssociationsResponse = (ProductlistSetProductListAssociationsResponse) o;
+    return Objects.equals(this.associations, productlistSetProductListAssociationsResponse.associations) &&
+        Objects.equals(this.errors, productlistSetProductListAssociationsResponse.errors);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(associations);
+    return Objects.hash(associations, errors);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ProductlistGetProductListAssociationsByProductGrnResponse {\n");
+    sb.append("class ProductlistSetProductListAssociationsResponse {\n");
     sb.append("    associations: ").append(toIndentedString(associations)).append("\n");
+    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -134,6 +168,7 @@ public class ProductlistGetProductListAssociationsByProductGrnResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("associations");
+    openapiFields.add("errors");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -143,20 +178,20 @@ public class ProductlistGetProductListAssociationsByProductGrnResponse {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ProductlistGetProductListAssociationsByProductGrnResponse
+  * @throws IOException if the JSON Element is invalid with respect to ProductlistSetProductListAssociationsResponse
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ProductlistGetProductListAssociationsByProductGrnResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ProductlistGetProductListAssociationsByProductGrnResponse is not found in the empty JSON string", ProductlistGetProductListAssociationsByProductGrnResponse.openapiRequiredFields.toString()));
+        if (!ProductlistSetProductListAssociationsResponse.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ProductlistSetProductListAssociationsResponse is not found in the empty JSON string", ProductlistSetProductListAssociationsResponse.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ProductlistGetProductListAssociationsByProductGrnResponse.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ProductlistGetProductListAssociationsByProductGrnResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ProductlistSetProductListAssociationsResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ProductlistSetProductListAssociationsResponse` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -174,28 +209,42 @@ public class ProductlistGetProductListAssociationsByProductGrnResponse {
           };
         }
       }
+      if (jsonObj.get("errors") != null && !jsonObj.get("errors").isJsonNull()) {
+        JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
+        if (jsonArrayerrors != null) {
+          // ensure the json data is an array
+          if (!jsonObj.get("errors").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `errors` to be an array in the JSON string but got `%s`", jsonObj.get("errors").toString()));
+          }
+
+          // validate the optional field `errors` (array)
+          for (int i = 0; i < jsonArrayerrors.size(); i++) {
+            ProductlistProductListAssociationError.validateJsonElement(jsonArrayerrors.get(i));
+          };
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ProductlistGetProductListAssociationsByProductGrnResponse.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ProductlistGetProductListAssociationsByProductGrnResponse' and its subtypes
+       if (!ProductlistSetProductListAssociationsResponse.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ProductlistSetProductListAssociationsResponse' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ProductlistGetProductListAssociationsByProductGrnResponse> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ProductlistGetProductListAssociationsByProductGrnResponse.class));
+       final TypeAdapter<ProductlistSetProductListAssociationsResponse> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ProductlistSetProductListAssociationsResponse.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ProductlistGetProductListAssociationsByProductGrnResponse>() {
+       return (TypeAdapter<T>) new TypeAdapter<ProductlistSetProductListAssociationsResponse>() {
            @Override
-           public void write(JsonWriter out, ProductlistGetProductListAssociationsByProductGrnResponse value) throws IOException {
+           public void write(JsonWriter out, ProductlistSetProductListAssociationsResponse value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ProductlistGetProductListAssociationsByProductGrnResponse read(JsonReader in) throws IOException {
+           public ProductlistSetProductListAssociationsResponse read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -206,18 +255,18 @@ public class ProductlistGetProductListAssociationsByProductGrnResponse {
   }
 
  /**
-  * Create an instance of ProductlistGetProductListAssociationsByProductGrnResponse given an JSON string
+  * Create an instance of ProductlistSetProductListAssociationsResponse given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ProductlistGetProductListAssociationsByProductGrnResponse
-  * @throws IOException if the JSON string is invalid with respect to ProductlistGetProductListAssociationsByProductGrnResponse
+  * @return An instance of ProductlistSetProductListAssociationsResponse
+  * @throws IOException if the JSON string is invalid with respect to ProductlistSetProductListAssociationsResponse
   */
-  public static ProductlistGetProductListAssociationsByProductGrnResponse fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ProductlistGetProductListAssociationsByProductGrnResponse.class);
+  public static ProductlistSetProductListAssociationsResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ProductlistSetProductListAssociationsResponse.class);
   }
 
  /**
-  * Convert an instance of ProductlistGetProductListAssociationsByProductGrnResponse to an JSON string
+  * Convert an instance of ProductlistSetProductListAssociationsResponse to an JSON string
   *
   * @return JSON string
   */

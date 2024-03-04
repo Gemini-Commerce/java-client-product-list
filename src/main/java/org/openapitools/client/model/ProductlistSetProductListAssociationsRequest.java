@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import org.openapitools.client.model.ProductlistOrderBy;
+import org.openapitools.client.model.SetProductListAssociationsRequestAssociation;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -50,10 +50,10 @@ import java.util.Set;
 import GeminiCommerce_ProductList.JSON;
 
 /**
- * ProductlistListProductListAssociationsRequest
+ * ProductlistSetProductListAssociationsRequest
  */
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-04T10:06:39.440684146Z[Etc/UTC]")
-public class ProductlistListProductListAssociationsRequest {
+public class ProductlistSetProductListAssociationsRequest {
   public static final String SERIALIZED_NAME_TENANT_ID = "tenantId";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
   private String tenantId;
@@ -66,22 +66,14 @@ public class ProductlistListProductListAssociationsRequest {
   @SerializedName(SERIALIZED_NAME_PRODUCT_GRN)
   private String productGrn;
 
-  public static final String SERIALIZED_NAME_PAGE_SIZE = "pageSize";
-  @SerializedName(SERIALIZED_NAME_PAGE_SIZE)
-  private Long pageSize;
+  public static final String SERIALIZED_NAME_ASSOCIATIONS = "associations";
+  @SerializedName(SERIALIZED_NAME_ASSOCIATIONS)
+  private List<SetProductListAssociationsRequestAssociation> associations;
 
-  public static final String SERIALIZED_NAME_PAGE_TOKEN = "pageToken";
-  @SerializedName(SERIALIZED_NAME_PAGE_TOKEN)
-  private String pageToken;
-
-  public static final String SERIALIZED_NAME_ORDER_BY = "orderBy";
-  @SerializedName(SERIALIZED_NAME_ORDER_BY)
-  private List<ProductlistOrderBy> orderBy;
-
-  public ProductlistListProductListAssociationsRequest() {
+  public ProductlistSetProductListAssociationsRequest() {
   }
 
-  public ProductlistListProductListAssociationsRequest tenantId(String tenantId) {
+  public ProductlistSetProductListAssociationsRequest tenantId(String tenantId) {
     this.tenantId = tenantId;
     return this;
   }
@@ -100,7 +92,7 @@ public class ProductlistListProductListAssociationsRequest {
   }
 
 
-  public ProductlistListProductListAssociationsRequest listId(String listId) {
+  public ProductlistSetProductListAssociationsRequest listId(String listId) {
     this.listId = listId;
     return this;
   }
@@ -119,7 +111,7 @@ public class ProductlistListProductListAssociationsRequest {
   }
 
 
-  public ProductlistListProductListAssociationsRequest productGrn(String productGrn) {
+  public ProductlistSetProductListAssociationsRequest productGrn(String productGrn) {
     this.productGrn = productGrn;
     return this;
   }
@@ -138,68 +130,30 @@ public class ProductlistListProductListAssociationsRequest {
   }
 
 
-  public ProductlistListProductListAssociationsRequest pageSize(Long pageSize) {
-    this.pageSize = pageSize;
+  public ProductlistSetProductListAssociationsRequest associations(List<SetProductListAssociationsRequestAssociation> associations) {
+    this.associations = associations;
     return this;
   }
 
-   /**
-   * Get pageSize
-   * @return pageSize
-  **/
-  @javax.annotation.Nullable
-  public Long getPageSize() {
-    return pageSize;
-  }
-
-  public void setPageSize(Long pageSize) {
-    this.pageSize = pageSize;
-  }
-
-
-  public ProductlistListProductListAssociationsRequest pageToken(String pageToken) {
-    this.pageToken = pageToken;
-    return this;
-  }
-
-   /**
-   * Get pageToken
-   * @return pageToken
-  **/
-  @javax.annotation.Nullable
-  public String getPageToken() {
-    return pageToken;
-  }
-
-  public void setPageToken(String pageToken) {
-    this.pageToken = pageToken;
-  }
-
-
-  public ProductlistListProductListAssociationsRequest orderBy(List<ProductlistOrderBy> orderBy) {
-    this.orderBy = orderBy;
-    return this;
-  }
-
-  public ProductlistListProductListAssociationsRequest addOrderByItem(ProductlistOrderBy orderByItem) {
-    if (this.orderBy == null) {
-      this.orderBy = new ArrayList<>();
+  public ProductlistSetProductListAssociationsRequest addAssociationsItem(SetProductListAssociationsRequestAssociation associationsItem) {
+    if (this.associations == null) {
+      this.associations = new ArrayList<>();
     }
-    this.orderBy.add(orderByItem);
+    this.associations.add(associationsItem);
     return this;
   }
 
    /**
-   * Get orderBy
-   * @return orderBy
+   * Get associations
+   * @return associations
   **/
   @javax.annotation.Nullable
-  public List<ProductlistOrderBy> getOrderBy() {
-    return orderBy;
+  public List<SetProductListAssociationsRequestAssociation> getAssociations() {
+    return associations;
   }
 
-  public void setOrderBy(List<ProductlistOrderBy> orderBy) {
-    this.orderBy = orderBy;
+  public void setAssociations(List<SetProductListAssociationsRequestAssociation> associations) {
+    this.associations = associations;
   }
 
 
@@ -212,30 +166,26 @@ public class ProductlistListProductListAssociationsRequest {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    ProductlistListProductListAssociationsRequest productlistListProductListAssociationsRequest = (ProductlistListProductListAssociationsRequest) o;
-    return Objects.equals(this.tenantId, productlistListProductListAssociationsRequest.tenantId) &&
-        Objects.equals(this.listId, productlistListProductListAssociationsRequest.listId) &&
-        Objects.equals(this.productGrn, productlistListProductListAssociationsRequest.productGrn) &&
-        Objects.equals(this.pageSize, productlistListProductListAssociationsRequest.pageSize) &&
-        Objects.equals(this.pageToken, productlistListProductListAssociationsRequest.pageToken) &&
-        Objects.equals(this.orderBy, productlistListProductListAssociationsRequest.orderBy);
+    ProductlistSetProductListAssociationsRequest productlistSetProductListAssociationsRequest = (ProductlistSetProductListAssociationsRequest) o;
+    return Objects.equals(this.tenantId, productlistSetProductListAssociationsRequest.tenantId) &&
+        Objects.equals(this.listId, productlistSetProductListAssociationsRequest.listId) &&
+        Objects.equals(this.productGrn, productlistSetProductListAssociationsRequest.productGrn) &&
+        Objects.equals(this.associations, productlistSetProductListAssociationsRequest.associations);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tenantId, listId, productGrn, pageSize, pageToken, orderBy);
+    return Objects.hash(tenantId, listId, productGrn, associations);
   }
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class ProductlistListProductListAssociationsRequest {\n");
+    sb.append("class ProductlistSetProductListAssociationsRequest {\n");
     sb.append("    tenantId: ").append(toIndentedString(tenantId)).append("\n");
     sb.append("    listId: ").append(toIndentedString(listId)).append("\n");
     sb.append("    productGrn: ").append(toIndentedString(productGrn)).append("\n");
-    sb.append("    pageSize: ").append(toIndentedString(pageSize)).append("\n");
-    sb.append("    pageToken: ").append(toIndentedString(pageToken)).append("\n");
-    sb.append("    orderBy: ").append(toIndentedString(orderBy)).append("\n");
+    sb.append("    associations: ").append(toIndentedString(associations)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -261,9 +211,7 @@ public class ProductlistListProductListAssociationsRequest {
     openapiFields.add("tenantId");
     openapiFields.add("listId");
     openapiFields.add("productGrn");
-    openapiFields.add("pageSize");
-    openapiFields.add("pageToken");
-    openapiFields.add("orderBy");
+    openapiFields.add("associations");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -273,20 +221,20 @@ public class ProductlistListProductListAssociationsRequest {
   * Validates the JSON Element and throws an exception if issues found
   *
   * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ProductlistListProductListAssociationsRequest
+  * @throws IOException if the JSON Element is invalid with respect to ProductlistSetProductListAssociationsRequest
   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
-        if (!ProductlistListProductListAssociationsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
-          throw new IllegalArgumentException(String.format("The required field(s) %s in ProductlistListProductListAssociationsRequest is not found in the empty JSON string", ProductlistListProductListAssociationsRequest.openapiRequiredFields.toString()));
+        if (!ProductlistSetProductListAssociationsRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ProductlistSetProductListAssociationsRequest is not found in the empty JSON string", ProductlistSetProductListAssociationsRequest.openapiRequiredFields.toString()));
         }
       }
 
       Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
       // check to see if the JSON string contains additional fields
       for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ProductlistListProductListAssociationsRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ProductlistListProductListAssociationsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
+        if (!ProductlistSetProductListAssociationsRequest.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ProductlistSetProductListAssociationsRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -299,20 +247,17 @@ public class ProductlistListProductListAssociationsRequest {
       if ((jsonObj.get("productGrn") != null && !jsonObj.get("productGrn").isJsonNull()) && !jsonObj.get("productGrn").isJsonPrimitive()) {
         throw new IllegalArgumentException(String.format("Expected the field `productGrn` to be a primitive type in the JSON string but got `%s`", jsonObj.get("productGrn").toString()));
       }
-      if ((jsonObj.get("pageToken") != null && !jsonObj.get("pageToken").isJsonNull()) && !jsonObj.get("pageToken").isJsonPrimitive()) {
-        throw new IllegalArgumentException(String.format("Expected the field `pageToken` to be a primitive type in the JSON string but got `%s`", jsonObj.get("pageToken").toString()));
-      }
-      if (jsonObj.get("orderBy") != null && !jsonObj.get("orderBy").isJsonNull()) {
-        JsonArray jsonArrayorderBy = jsonObj.getAsJsonArray("orderBy");
-        if (jsonArrayorderBy != null) {
+      if (jsonObj.get("associations") != null && !jsonObj.get("associations").isJsonNull()) {
+        JsonArray jsonArrayassociations = jsonObj.getAsJsonArray("associations");
+        if (jsonArrayassociations != null) {
           // ensure the json data is an array
-          if (!jsonObj.get("orderBy").isJsonArray()) {
-            throw new IllegalArgumentException(String.format("Expected the field `orderBy` to be an array in the JSON string but got `%s`", jsonObj.get("orderBy").toString()));
+          if (!jsonObj.get("associations").isJsonArray()) {
+            throw new IllegalArgumentException(String.format("Expected the field `associations` to be an array in the JSON string but got `%s`", jsonObj.get("associations").toString()));
           }
 
-          // validate the optional field `orderBy` (array)
-          for (int i = 0; i < jsonArrayorderBy.size(); i++) {
-            ProductlistOrderBy.validateJsonElement(jsonArrayorderBy.get(i));
+          // validate the optional field `associations` (array)
+          for (int i = 0; i < jsonArrayassociations.size(); i++) {
+            SetProductListAssociationsRequestAssociation.validateJsonElement(jsonArrayassociations.get(i));
           };
         }
       }
@@ -322,22 +267,22 @@ public class ProductlistListProductListAssociationsRequest {
     @SuppressWarnings("unchecked")
     @Override
     public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
-       if (!ProductlistListProductListAssociationsRequest.class.isAssignableFrom(type.getRawType())) {
-         return null; // this class only serializes 'ProductlistListProductListAssociationsRequest' and its subtypes
+       if (!ProductlistSetProductListAssociationsRequest.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'ProductlistSetProductListAssociationsRequest' and its subtypes
        }
        final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
-       final TypeAdapter<ProductlistListProductListAssociationsRequest> thisAdapter
-                        = gson.getDelegateAdapter(this, TypeToken.get(ProductlistListProductListAssociationsRequest.class));
+       final TypeAdapter<ProductlistSetProductListAssociationsRequest> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(ProductlistSetProductListAssociationsRequest.class));
 
-       return (TypeAdapter<T>) new TypeAdapter<ProductlistListProductListAssociationsRequest>() {
+       return (TypeAdapter<T>) new TypeAdapter<ProductlistSetProductListAssociationsRequest>() {
            @Override
-           public void write(JsonWriter out, ProductlistListProductListAssociationsRequest value) throws IOException {
+           public void write(JsonWriter out, ProductlistSetProductListAssociationsRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
              elementAdapter.write(out, obj);
            }
 
            @Override
-           public ProductlistListProductListAssociationsRequest read(JsonReader in) throws IOException {
+           public ProductlistSetProductListAssociationsRequest read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
              return thisAdapter.fromJsonTree(jsonElement);
@@ -348,18 +293,18 @@ public class ProductlistListProductListAssociationsRequest {
   }
 
  /**
-  * Create an instance of ProductlistListProductListAssociationsRequest given an JSON string
+  * Create an instance of ProductlistSetProductListAssociationsRequest given an JSON string
   *
   * @param jsonString JSON string
-  * @return An instance of ProductlistListProductListAssociationsRequest
-  * @throws IOException if the JSON string is invalid with respect to ProductlistListProductListAssociationsRequest
+  * @return An instance of ProductlistSetProductListAssociationsRequest
+  * @throws IOException if the JSON string is invalid with respect to ProductlistSetProductListAssociationsRequest
   */
-  public static ProductlistListProductListAssociationsRequest fromJson(String jsonString) throws IOException {
-    return JSON.getGson().fromJson(jsonString, ProductlistListProductListAssociationsRequest.class);
+  public static ProductlistSetProductListAssociationsRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ProductlistSetProductListAssociationsRequest.class);
   }
 
  /**
-  * Convert an instance of ProductlistListProductListAssociationsRequest to an JSON string
+  * Convert an instance of ProductlistSetProductListAssociationsRequest to an JSON string
   *
   * @return JSON string
   */

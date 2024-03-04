@@ -19,26 +19,25 @@ import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
-import org.openapitools.client.model.ProductlistLocalizedText;
-import org.openapitools.client.model.ProtobufAny;
+import java.util.List;
+import org.openapitools.client.model.SetProductListAssociationsRequestAssociation;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ProductlistUpdateProductListRequest
+ * Model tests for ProductlistSetProductListAssociationsRequest
  */
-public class ProductlistUpdateProductListRequestTest {
-    private final ProductlistUpdateProductListRequest model = new ProductlistUpdateProductListRequest();
+public class ProductlistSetProductListAssociationsRequestTest {
+    private final ProductlistSetProductListAssociationsRequest model = new ProductlistSetProductListAssociationsRequest();
 
     /**
-     * Model tests for ProductlistUpdateProductListRequest
+     * Model tests for ProductlistSetProductListAssociationsRequest
      */
     @Test
-    public void testProductlistUpdateProductListRequest() {
-        // TODO: test ProductlistUpdateProductListRequest
+    public void testProductlistSetProductListAssociationsRequest() {
+        // TODO: test ProductlistSetProductListAssociationsRequest
     }
 
     /**
@@ -50,35 +49,27 @@ public class ProductlistUpdateProductListRequestTest {
     }
 
     /**
-     * Test the property 'id'
+     * Test the property 'listId'
      */
     @Test
-    public void idTest() {
-        // TODO: test id
+    public void listIdTest() {
+        // TODO: test listId
     }
 
     /**
-     * Test the property 'urlKey'
+     * Test the property 'productGrn'
      */
     @Test
-    public void urlKeyTest() {
-        // TODO: test urlKey
+    public void productGrnTest() {
+        // TODO: test productGrn
     }
 
     /**
-     * Test the property 'attributes'
+     * Test the property 'associations'
      */
     @Test
-    public void attributesTest() {
-        // TODO: test attributes
-    }
-
-    /**
-     * Test the property 'attributesMask'
-     */
-    @Test
-    public void attributesMaskTest() {
-        // TODO: test attributesMask
+    public void associationsTest() {
+        // TODO: test associations
     }
 
 }

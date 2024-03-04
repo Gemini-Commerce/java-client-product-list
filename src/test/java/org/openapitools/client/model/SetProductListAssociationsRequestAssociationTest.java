@@ -20,30 +20,45 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 import java.util.Arrays;
-import org.openapitools.client.model.ProductlistProductListEntity;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 /**
- * Model tests for ProductlistGetProductListByCodeResponse
+ * Model tests for SetProductListAssociationsRequestAssociation
  */
-public class ProductlistGetProductListByCodeResponseTest {
-    private final ProductlistGetProductListByCodeResponse model = new ProductlistGetProductListByCodeResponse();
+public class SetProductListAssociationsRequestAssociationTest {
+    private final SetProductListAssociationsRequestAssociation model = new SetProductListAssociationsRequestAssociation();
 
     /**
-     * Model tests for ProductlistGetProductListByCodeResponse
+     * Model tests for SetProductListAssociationsRequestAssociation
      */
     @Test
-    public void testProductlistGetProductListByCodeResponse() {
-        // TODO: test ProductlistGetProductListByCodeResponse
+    public void testSetProductListAssociationsRequestAssociation() {
+        // TODO: test SetProductListAssociationsRequestAssociation
     }
 
     /**
-     * Test the property '_list'
+     * Test the property 'listId'
      */
     @Test
-    public void _listTest() {
-        // TODO: test _list
+    public void listIdTest() {
+        // TODO: test listId
+    }
+
+    /**
+     * Test the property 'position'
+     */
+    @Test
+    public void positionTest() {
+        // TODO: test position
+    }
+
+    /**
+     * Test the property 'productGrn'
+     */
+    @Test
+    public void productGrnTest() {
+        // TODO: test productGrn
     }
 
 }
