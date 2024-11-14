@@ -33,11 +33,11 @@ The CreateProductList endpoint is used to create a new collection of products wi
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -105,11 +105,11 @@ The CreateProductListAssociation endpoint is used to create an association betwe
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -177,11 +177,11 @@ The DeleteProductList endpoint is used to delete an existing collection of produ
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -249,11 +249,11 @@ The DeleteProductListAssociation endpoint is used to delete an association betwe
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -321,11 +321,11 @@ The GetProductListAssociationsByProductGrn endpoint is used to get the associati
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -393,11 +393,11 @@ The GetProductListByCode endpoint is used to retrieve an existing collection of 
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -465,11 +465,11 @@ The GetProductListById endpoint is used to retrieve an existing collection of pr
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -537,11 +537,11 @@ The GetProductListByUrlKey endpoint is used to retrieve an existing collection o
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -609,11 +609,11 @@ The GetProductListsCount endpoint is used to get the number of products associat
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -681,11 +681,11 @@ The ListProductListAssociations endpoint is used to list the associations betwee
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -753,11 +753,11 @@ The ListProductLists endpoint is used to retrieve a list of existing collections
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -823,11 +823,11 @@ public class Example {
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -893,11 +893,11 @@ The SearchProductLists endpoint is used to retrieve a list of existing collectio
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -965,11 +965,11 @@ The SearchProductListsByIds endpoint is used to retrieve a list of existing coll
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -1037,11 +1037,11 @@ The SetProductListAssociations endpoint is used to set the associations between 
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {
@@ -1109,11 +1109,11 @@ The UpdateProductList endpoint is used to update an existing collection of produ
 ### Example
 ```java
 // Import classes:
-import GeminiCommerce_ProductList.ApiClient;
-import GeminiCommerce_ProductList.ApiException;
-import GeminiCommerce_ProductList.Configuration;
-import GeminiCommerce_ProductList.auth.*;
-import GeminiCommerce_ProductList.models.*;
+import GeminiCommerce.ProductList.ApiClient;
+import GeminiCommerce.ProductList.ApiException;
+import GeminiCommerce.ProductList.Configuration;
+import GeminiCommerce.ProductList.auth.*;
+import GeminiCommerce.ProductList.models.*;
 import org.openapitools.client.api.ProductListApi;
 
 public class Example {

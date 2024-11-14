@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**attributes**| **List<String>** |   | [optional]
+**attributes**| **List<String>** |   | [optional] [default to new ArrayList<>()]
 **value**| **String** |   | [optional]
 
 

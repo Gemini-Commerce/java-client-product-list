@@ -44,7 +44,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/CreateProductList:
     post:
       description: The CreateProductList endpoint is used to create a new collection
@@ -88,7 +89,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/CreateProductListAssociation:
     post:
       description: The CreateProductListAssociation endpoint is used to create an
@@ -131,7 +133,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/DeleteProductList:
     post:
       description: The DeleteProductList endpoint is used to delete an existing collection
@@ -174,7 +177,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/DeleteProductListAssociation:
     post:
       description: The DeleteProductListAssociation endpoint is used to delete an
@@ -217,7 +221,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/GetProductListAssociationsByProductGrn:
     post:
       description: The GetProductListAssociationsByProductGrn endpoint is used to
@@ -261,7 +266,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/GetProductListByCode:
     post:
       description: The GetProductListByCode endpoint is used to retrieve an existing
@@ -304,7 +310,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/GetProductListById:
     post:
       description: The GetProductListById endpoint is used to retrieve an existing
@@ -347,7 +354,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/GetProductListByUrlKey:
     post:
       description: The GetProductListByUrlKey endpoint is used to retrieve an existing
@@ -390,7 +398,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/GetProductListsCount:
     post:
       description: The GetProductListsCount endpoint is used to get the number of
@@ -433,7 +442,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/ListProductListAssociations:
     post:
       description: The ListProductListAssociations endpoint is used to list the associations
@@ -476,7 +486,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/ListProductLists:
     post:
       description: The ListProductLists endpoint is used to retrieve a list of existing
@@ -519,7 +530,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/SearchProductLists:
     post:
       description: The SearchProductLists endpoint is used to retrieve a list of existing
@@ -562,7 +574,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/SearchProductListsByIds:
     post:
       description: The SearchProductListsByIds endpoint is used to retrieve a list
@@ -605,7 +618,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/SetProductListAssociations:
     post:
       description: The SetProductListAssociations endpoint is used to set the associations
@@ -648,7 +662,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
   /productlist.ProductList/UpdateProductList:
     post:
       description: The UpdateProductList endpoint is used to update an existing collection
@@ -691,7 +706,8 @@ paths:
       - ProductList
       x-codegen-request-body-name: body
       x-content-type: application/json
-      x-accepts: application/json
+      x-accepts:
+      - application/json
 components:
   schemas:
     OrderByDirection:
@@ -1486,6 +1502,12 @@ components:
           type: string
       type: object
     rpcStatus:
+      example:
+        code: 0
+        details:
+        - '@type': '@type'
+        - '@type': '@type'
+        message: message
       properties:
         code:
           format: int32

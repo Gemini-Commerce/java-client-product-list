@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**lists**| [**List<ProductlistProductListEntity>**](ProductlistProductListEntity.md) |   | [optional]
+**lists**| [**List<ProductlistProductListEntity>**](ProductlistProductListEntity.md) |   | [optional] [default to new ArrayList<>()]
 **nextPageToken**| **String** |   | [optional]
 
 

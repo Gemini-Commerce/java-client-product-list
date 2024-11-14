@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**associations**| [**List<ProductlistProductListAssociation>**](ProductlistProductListAssociation.md) |   | [optional]
+**associations**| [**List<ProductlistProductListAssociation>**](ProductlistProductListAssociation.md) |   | [optional] [default to new ArrayList<>()]
 **nextPageToken**| **String** |   | [optional]
 
 

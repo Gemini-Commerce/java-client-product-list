@@ -37,19 +37,18 @@ import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
 import java.io.IOException;
 
-import java.lang.reflect.Type;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import GeminiCommerce_ProductList.JSON;
+import GeminiCommerce.ProductList.JSON;
 
 /**
  * ProductlistCreateProductListAssociationRequest
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-03-04T11:01:20.576599373Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-14T11:50:40.183451912Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ProductlistCreateProductListAssociationRequest {
   public static final String SERIALIZED_NAME_TENANT_ID = "tenantId";
   @SerializedName(SERIALIZED_NAME_TENANT_ID)
@@ -75,10 +74,10 @@ public class ProductlistCreateProductListAssociationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get tenantId
    * @return tenantId
-  **/
+   */
   @javax.annotation.Nullable
   public String getTenantId() {
     return tenantId;
@@ -94,10 +93,10 @@ public class ProductlistCreateProductListAssociationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get listId
    * @return listId
-  **/
+   */
   @javax.annotation.Nullable
   public String getListId() {
     return listId;
@@ -113,10 +112,10 @@ public class ProductlistCreateProductListAssociationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get position
    * @return position
-  **/
+   */
   @javax.annotation.Nullable
   public Integer getPosition() {
     return position;
@@ -132,10 +131,10 @@ public class ProductlistCreateProductListAssociationRequest {
     return this;
   }
 
-   /**
+  /**
    * Get productGrn
    * @return productGrn
-  **/
+   */
   @javax.annotation.Nullable
   public String getProductGrn() {
     return productGrn;
@@ -145,6 +144,50 @@ public class ProductlistCreateProductListAssociationRequest {
     this.productGrn = productGrn;
   }
 
+  /**
+   * A container for additional, undeclared properties.
+   * This is a holder for any undeclared properties as specified with
+   * the 'additionalProperties' keyword in the OAS document.
+   */
+  private Map<String, Object> additionalProperties;
+
+  /**
+   * Set the additional (undeclared) property with the specified name and value.
+   * If the property does not already exist, create it otherwise replace it.
+   *
+   * @param key name of the property
+   * @param value value of the property
+   * @return the ProductlistCreateProductListAssociationRequest instance itself
+   */
+  public ProductlistCreateProductListAssociationRequest putAdditionalProperty(String key, Object value) {
+    if (this.additionalProperties == null) {
+        this.additionalProperties = new HashMap<String, Object>();
+    }
+    this.additionalProperties.put(key, value);
+    return this;
+  }
+
+  /**
+   * Return the additional (undeclared) property.
+   *
+   * @return a map of objects
+   */
+  public Map<String, Object> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  /**
+   * Return the additional (undeclared) property with the specified name.
+   *
+   * @param key name of the property
+   * @return an object
+   */
+  public Object getAdditionalProperty(String key) {
+    if (this.additionalProperties == null) {
+        return null;
+    }
+    return this.additionalProperties.get(key);
+  }
 
 
   @Override
@@ -159,12 +202,13 @@ public class ProductlistCreateProductListAssociationRequest {
     return Objects.equals(this.tenantId, productlistCreateProductListAssociationRequest.tenantId) &&
         Objects.equals(this.listId, productlistCreateProductListAssociationRequest.listId) &&
         Objects.equals(this.position, productlistCreateProductListAssociationRequest.position) &&
-        Objects.equals(this.productGrn, productlistCreateProductListAssociationRequest.productGrn);
+        Objects.equals(this.productGrn, productlistCreateProductListAssociationRequest.productGrn)&&
+        Objects.equals(this.additionalProperties, productlistCreateProductListAssociationRequest.additionalProperties);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(tenantId, listId, position, productGrn);
+    return Objects.hash(tenantId, listId, position, productGrn, additionalProperties);
   }
 
   @Override
@@ -175,6 +219,7 @@ public class ProductlistCreateProductListAssociationRequest {
     sb.append("    listId: ").append(toIndentedString(listId)).append("\n");
     sb.append("    position: ").append(toIndentedString(position)).append("\n");
     sb.append("    productGrn: ").append(toIndentedString(productGrn)).append("\n");
+    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -206,24 +251,16 @@ public class ProductlistCreateProductListAssociationRequest {
     openapiRequiredFields = new HashSet<String>();
   }
 
- /**
-  * Validates the JSON Element and throws an exception if issues found
-  *
-  * @param jsonElement JSON Element
-  * @throws IOException if the JSON Element is invalid with respect to ProductlistCreateProductListAssociationRequest
-  */
+  /**
+   * Validates the JSON Element and throws an exception if issues found
+   *
+   * @param jsonElement JSON Element
+   * @throws IOException if the JSON Element is invalid with respect to ProductlistCreateProductListAssociationRequest
+   */
   public static void validateJsonElement(JsonElement jsonElement) throws IOException {
       if (jsonElement == null) {
         if (!ProductlistCreateProductListAssociationRequest.openapiRequiredFields.isEmpty()) { // has required fields but JSON element is null
           throw new IllegalArgumentException(String.format("The required field(s) %s in ProductlistCreateProductListAssociationRequest is not found in the empty JSON string", ProductlistCreateProductListAssociationRequest.openapiRequiredFields.toString()));
-        }
-      }
-
-      Set<Map.Entry<String, JsonElement>> entries = jsonElement.getAsJsonObject().entrySet();
-      // check to see if the JSON string contains additional fields
-      for (Map.Entry<String, JsonElement> entry : entries) {
-        if (!ProductlistCreateProductListAssociationRequest.openapiFields.contains(entry.getKey())) {
-          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ProductlistCreateProductListAssociationRequest` properties. JSON: %s", entry.getKey(), jsonElement.toString()));
         }
       }
         JsonObject jsonObj = jsonElement.getAsJsonObject();
@@ -253,6 +290,28 @@ public class ProductlistCreateProductListAssociationRequest {
            @Override
            public void write(JsonWriter out, ProductlistCreateProductListAssociationRequest value) throws IOException {
              JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             obj.remove("additionalProperties");
+             // serialize additional properties
+             if (value.getAdditionalProperties() != null) {
+               for (Map.Entry<String, Object> entry : value.getAdditionalProperties().entrySet()) {
+                 if (entry.getValue() instanceof String)
+                   obj.addProperty(entry.getKey(), (String) entry.getValue());
+                 else if (entry.getValue() instanceof Number)
+                   obj.addProperty(entry.getKey(), (Number) entry.getValue());
+                 else if (entry.getValue() instanceof Boolean)
+                   obj.addProperty(entry.getKey(), (Boolean) entry.getValue());
+                 else if (entry.getValue() instanceof Character)
+                   obj.addProperty(entry.getKey(), (Character) entry.getValue());
+                 else {
+                   JsonElement jsonElement = gson.toJsonTree(entry.getValue());
+                   if (jsonElement.isJsonArray()) {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonArray());
+                   } else {
+                     obj.add(entry.getKey(), jsonElement.getAsJsonObject());
+                   }
+                 }
+               }
+             }
              elementAdapter.write(out, obj);
            }
 
@@ -260,29 +319,50 @@ public class ProductlistCreateProductListAssociationRequest {
            public ProductlistCreateProductListAssociationRequest read(JsonReader in) throws IOException {
              JsonElement jsonElement = elementAdapter.read(in);
              validateJsonElement(jsonElement);
-             return thisAdapter.fromJsonTree(jsonElement);
+             JsonObject jsonObj = jsonElement.getAsJsonObject();
+             // store additional fields in the deserialized instance
+             ProductlistCreateProductListAssociationRequest instance = thisAdapter.fromJsonTree(jsonObj);
+             for (Map.Entry<String, JsonElement> entry : jsonObj.entrySet()) {
+               if (!openapiFields.contains(entry.getKey())) {
+                 if (entry.getValue().isJsonPrimitive()) { // primitive type
+                   if (entry.getValue().getAsJsonPrimitive().isString())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsString());
+                   else if (entry.getValue().getAsJsonPrimitive().isNumber())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsNumber());
+                   else if (entry.getValue().getAsJsonPrimitive().isBoolean())
+                     instance.putAdditionalProperty(entry.getKey(), entry.getValue().getAsBoolean());
+                   else
+                     throw new IllegalArgumentException(String.format("The field `%s` has unknown primitive type. Value: %s", entry.getKey(), entry.getValue().toString()));
+                 } else if (entry.getValue().isJsonArray()) {
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), List.class));
+                 } else { // JSON object
+                     instance.putAdditionalProperty(entry.getKey(), gson.fromJson(entry.getValue(), HashMap.class));
+                 }
+               }
+             }
+             return instance;
            }
 
        }.nullSafe();
     }
   }
 
- /**
-  * Create an instance of ProductlistCreateProductListAssociationRequest given an JSON string
-  *
-  * @param jsonString JSON string
-  * @return An instance of ProductlistCreateProductListAssociationRequest
-  * @throws IOException if the JSON string is invalid with respect to ProductlistCreateProductListAssociationRequest
-  */
+  /**
+   * Create an instance of ProductlistCreateProductListAssociationRequest given an JSON string
+   *
+   * @param jsonString JSON string
+   * @return An instance of ProductlistCreateProductListAssociationRequest
+   * @throws IOException if the JSON string is invalid with respect to ProductlistCreateProductListAssociationRequest
+   */
   public static ProductlistCreateProductListAssociationRequest fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ProductlistCreateProductListAssociationRequest.class);
   }
 
- /**
-  * Convert an instance of ProductlistCreateProductListAssociationRequest to an JSON string
-  *
-  * @return JSON string
-  */
+  /**
+   * Convert an instance of ProductlistCreateProductListAssociationRequest to an JSON string
+   *
+   * @return JSON string
+   */
   public String toJson() {
     return JSON.getGson().toJson(this);
   }
