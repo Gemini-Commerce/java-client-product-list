@@ -51,7 +51,7 @@ import GeminiCommerce.ProductList.JSON;
 /**
  * ProductlistSearchProductListsByIdsResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-14T11:50:40.183451912Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-15T15:31:13.102952282Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ProductlistSearchProductListsByIdsResponse {
   public static final String SERIALIZED_NAME_RESULTS = "results";
   @SerializedName(SERIALIZED_NAME_RESULTS)
