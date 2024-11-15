@@ -49,7 +49,7 @@ import GeminiCommerce.ProductList.JSON;
 /**
  * ProductlistGetProductListByUrlKeyResponse
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-15T15:31:13.102952282Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-15T16:33:13.162811698Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class ProductlistGetProductListByUrlKeyResponse {
   public static final String SERIALIZED_NAME_LIST = "list";
   @SerializedName(SERIALIZED_NAME_LIST)
