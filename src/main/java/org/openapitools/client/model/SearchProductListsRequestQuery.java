@@ -50,7 +50,7 @@ import GeminiCommerce.ProductList.JSON;
 /**
  * SearchProductListsRequestQuery
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-15T16:33:13.162811698Z[Etc/UTC]", comments = "Generator version: 7.9.0")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2024-11-18T16:42:49.517729504Z[Etc/UTC]", comments = "Generator version: 7.9.0")
 public class SearchProductListsRequestQuery {
   public static final String SERIALIZED_NAME_ATTRIBUTES = "attributes";
   @SerializedName(SERIALIZED_NAME_ATTRIBUTES)
